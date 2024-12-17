@@ -10,7 +10,10 @@ const UserForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/users', { name, email });
+      const response = await axios.post('https://myform-2.onrender.com/api/users', {
+        name,
+        email
+      });
       setMessage('User added successfully!');
       setName('');
       setEmail('');
